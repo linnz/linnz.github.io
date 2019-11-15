@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://linnz.github.io/blog/"/>
-  <updated>2019-11-14T03:10:07.551Z</updated>
+  <updated>2019-11-15T06:07:16.220Z</updated>
   <id>https://linnz.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://linnz.github.io/blog/2019/11/14/hello-world/"/>
-    <id>https://linnz.github.io/blog/2019/11/14/hello-world/</id>
-    <published>2019-11-14T03:10:07.551Z</published>
-    <updated>2019-11-14T03:10:07.551Z</updated>
+    <title>PostgreSQL源码安装</title>
+    <link href="https://linnz.github.io/blog/2019/05/12/postgresql-yuan-ma-an-zhuang/"/>
+    <id>https://linnz.github.io/blog/2019/05/12/postgresql-yuan-ma-an-zhuang/</id>
+    <published>2019-05-12T06:48:31.000Z</published>
+    <updated>2019-11-15T06:07:16.220Z</updated>
     
     <summary type="html">
     
@@ -29,13 +29,115 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;h1 id=&quot;postgresql-源码安装与GDB调试&quot;&gt;&lt;a href=&quot;#postgresql-源码安装与GDB调试&quot; class=&quot;headerlink&quot; title=&quot;postgresql 源码安装与GDB调试&quot;&gt;&lt;/a&gt;postgresql
         
       
     
     </summary>
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>两数相加</title>
+    <link href="https://linnz.github.io/blog/2019/01/28/two-add/"/>
+    <id>https://linnz.github.io/blog/2019/01/28/two-add/</id>
+    <published>2019-01-28T08:07:14.000Z</published>
+    <updated>2019-11-15T06:07:16.220Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;题目链接&quot;&gt;&lt;a href=&quot;#题目链接&quot; class=&quot;headerlink&quot; title=&quot;题目链接&quot;&gt;&lt;/a&gt;题目链接&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/add-two-numbers/&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="leetcode" scheme="https://linnz.github.io/blog/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两数之和</title>
+    <link href="https://linnz.github.io/blog/2019/01/14/two-sum/"/>
+    <id>https://linnz.github.io/blog/2019/01/14/two-sum/</id>
+    <published>2019-01-14T14:10:25.000Z</published>
+    <updated>2019-11-15T06:07:16.220Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;题目链接&quot;&gt;&lt;a href=&quot;#题目链接&quot; class=&quot;headerlink&quot; title=&quot;题目链接&quot;&gt;&lt;/a&gt;题目链接&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/two-sum/&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="leetcode" scheme="https://linnz.github.io/blog/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GDB</title>
+    <link href="https://linnz.github.io/blog/2018/12/05/gdb/"/>
+    <id>https://linnz.github.io/blog/2018/12/05/gdb/</id>
+    <published>2018-12-05T15:44:16.000Z</published>
+    <updated>2019-11-15T06:07:16.220Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;center&gt;# GDB基本介绍&lt;/center&gt;
+
+&lt;h2 id=&quot;GDB基础知识&quot;&gt;&lt;a href=&quot;#GDB基础知识&quot; class=&quot;headerlink&quot; title=&quot;GDB基础知识&quot;&gt;&lt;/a&gt;GDB基础知识&lt;/h2&gt;&lt;p&gt;GDB, 是 The GNU
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="gdb" scheme="https://linnz.github.io/blog/tags/gdb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown</title>
+    <link href="https://linnz.github.io/blog/2018/11/27/markdown/"/>
+    <id>https://linnz.github.io/blog/2018/11/27/markdown/</id>
+    <published>2018-11-27T14:30:02.000Z</published>
+    <updated>2019-11-15T06:07:16.220Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Markdown语法&quot;&gt;&lt;a href=&quot;#Markdown语法&quot; class=&quot;headerlink&quot; title=&quot;Markdown语法&quot;&gt;&lt;/a&gt;Markdown语法&lt;/h2&gt;&lt;h3 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="markdown" scheme="https://linnz.github.io/blog/tags/markdown/"/>
     
   </entry>
   

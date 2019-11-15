@@ -4,13 +4,89 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/blog/2019/11/14/hello-world/"/>
-      <url>/blog/2019/11/14/hello-world/</url>
+      <title>PostgreSQL源码安装</title>
+      <link href="/blog/2019/05/12/postgresql-yuan-ma-an-zhuang/"/>
+      <url>/blog/2019/05/12/postgresql-yuan-ma-an-zhuang/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="postgresql-源码安装与GDB调试"><a href="#postgresql-源码安装与GDB调试" class="headerlink" title="postgresql 源码安装与GDB调试"></a>postgresql 源码安装与GDB调试</h1><h2 id="1-源码下载"><a href="#1-源码下载" class="headerlink" title="1.源码下载"></a>1.源码下载</h2><p><a href="https://www.postgresql.org/ftp/source/" target="_blank" rel="noopener">https://www.postgresql.org/ftp/source/</a></p><h2 id="2-安装依赖"><a href="#2-安装依赖" class="headerlink" title="2.安装依赖"></a>2.安装依赖</h2><ul><li>readline (命令行编辑支持库)</li><li>zlib (数据压缩支持库)</li><li>flex (词法分析库)</li><li>bison (语法分析库)</li></ul><p>安装命令（centos 7）:<br><code>yum install readline-devel zlib-devel flex bison</code></p><h2 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h2><p>在源码目录下执行<br><code>sudo ./configure --prefix=/usr/local/postgres --enable-debug --enable-cassert --enable-depend CFLAGS=-O0</code>  </p><ul><li>–prefix : 指定安装的目录</li><li>–enable-debug : 把所有程序和库以带有调试符号的方式编译 </li><li>–enable-cassert : 打开服务器中的断言（assertion）检查，它会检查许多”不可能发生”的条件。</li><li>–enable-depend ： 打开自动依赖性跟踪。</li><li>CFLAGS=-O0 ： 关闭优化</li></ul><h2 id="4-通用编译与安装"><a href="#4-通用编译与安装" class="headerlink" title="4.通用编译与安装"></a>4.通用编译与安装</h2><pre><code>make  sudo make install </code></pre><h2 id="5-GDB调试"><a href="#5-GDB调试" class="headerlink" title="5.GDB调试"></a>5.GDB调试</h2><p>1.查看进程号，在数据库中执行以下语句：  </p><pre><code>select pg_backend_pid();</code></pre><p>2.gdb 调试</p><pre><code>gdb attach 进程号</code></pre>]]></content>
       
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>两数相加</title>
+      <link href="/blog/2019/01/28/two-add/"/>
+      <url>/blog/2019/01/28/two-add/</url>
+      
+        <content type="html"><![CDATA[<h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p><a href="https://leetcode-cn.com/problems/add-two-numbers/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/add-two-numbers/</a></p><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照逆序 的方式存储的，并且它们的每个结点只能存储一位数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。<br>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p><h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807</p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>从表头开始将两个数字进行相加，由于会出现进位情况，需要一个变量carry来保存进位，并带入到下一次迭代计算中。<br>伪代码如下：<br>将当前结点初始化为返回列表的哑结点。<br>将进位carry初始化为 0。<br>遍历列表 l1l1 和 l2l2 直至到达它们的尾端。<br>将x设为l1当前结点的值。如果已经到达 l1的末尾，则将其值设置为0。<br>将y设为l2当前结点的值。如果已经到达l2的末尾，则将其值设置为0。<br>设定 sum = x + y + carry。<br>更新进位的值，carry = sum / 10。<br>创建一个数值为 (sum \bmod 10)(summod10) 的新结点，并将其设置为当前结点的下一个结点，然后将当前结点前进到下一个结点。<br>同时，将 l1和l2 前进到下一个结点。<br>检查 carry = 1 是否成立，如果成立，则向返回列表追加一个含有数字 11 的新结点。<br>返回哑结点的下一个结点。</p><p>时间复杂度：O(max(m,n)),m,n分别为l1和l2的长度<br>空间复杂度：O(max(m,n))</p><pre><code># Definition for singly-linked list.# class ListNode:#     def __init__(self, x):#         self.val = x#         self.next = Noneclass Solution:    def addTwoNumbers(self, l1, l2):        &quot;&quot;&quot;        :type l1: ListNode        :type l2: ListNode        :rtype: ListNode        &quot;&quot;&quot;        f=ListNode(0)        curr=f        carry=0;        while(l1!=None or l2!=None):            if l1!=None:                x=l1.val            else:                x=0            if l2!=None:                y=l2.val            else:                y=0            sum=x+y+carry            curr.next=ListNode(sum%10)            carry=int(sum/10)            curr=curr.next            if (l1!=None):                l1=l1.next            if (l2!=None):                l2=l2.next        if carry&gt;0:            t=ListNode(carry)            curr.next=ListNode(carry)        return f.next</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>两数之和</title>
+      <link href="/blog/2019/01/14/two-sum/"/>
+      <url>/blog/2019/01/14/two-sum/</url>
+      
+        <content type="html"><![CDATA[<h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p><a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/two-sum/</a></p><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p><h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p><h1 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h1><p>采用暴力法，遍历每个元素x，并查找一个值y使得x+y==target。<br>时间复杂度：O($n^2$)。<br>空间复杂度：O(1)。</p><pre><code>    class Solution:        def twoSum(self, nums, target):            &quot;&quot;&quot;            :type nums: List[int]            :type target: int            :rtype: List[int]            &quot;&quot;&quot;            result=[]            nlen=len(nums)            for i in range(nlen):                for j in range(i+1,nlen):                    if nums[i]+nums[j]==target:                        result.append(i)                        result.append(j)                        flag=True                        break                if(flag):                    break            return result</code></pre><h1 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h1><p>采用哈希表的方法，先构建一个哈希表，然后遍历每个元素x，查找是否存在y使得x+y=target,这时候相比方法一查找y的时间快的多了，这是通过空间换取时间的方法。<br>时间复杂度：O(n).<br>空间复杂度：O(n).</p><pre><code>class Solution:    def twoSum(self, nums, target):        &quot;&quot;&quot;        :type nums: List[int]        :type target: int        :rtype: List[int]        &quot;&quot;&quot;        result=[]        nlen=len(nums)        d={}        for i in range(nlen):            d[nums[i]]=i            tmp=target-nums[i]            if(d.get(tmp)!=None and d.get(tmp)!=i):                result.append(i)                result.append(d.get(tmp))                break        return result       </code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>GDB</title>
+      <link href="/blog/2018/12/05/gdb/"/>
+      <url>/blog/2018/12/05/gdb/</url>
+      
+        <content type="html"><![CDATA[<center># GDB基本介绍</center><h2 id="GDB基础知识"><a href="#GDB基础知识" class="headerlink" title="GDB基础知识"></a>GDB基础知识</h2><p>GDB, 是 The GNU Project Debugger 的缩写, 是 Linux 下功能全面的调试工具。GDB 支持断点、单步执行、打印变量、观察变量、查看寄存器、查看堆栈等调试手段。</p><h3 id="GDB的进入和退出"><a href="#GDB的进入和退出" class="headerlink" title="GDB的进入和退出"></a>GDB的进入和退出</h3><p><code>gcc bugging.c -o -g -m32</code><br>-o: 指定输出的文件名<br>-m32: 编译为32位 默认64位</p><p><code>gdb bugging</code><br>进入gdb调试 bugging</p><p>###gdb部分常用命令表</p><table><thead><tr><th>命令</th><th align="center">简写形式</th><th>说明</th></tr></thead><tbody><tr><td>list</td><td align="center">l</td><td>查看源码</td></tr><tr><td>backtrace</td><td align="center">bt、where</td><td>打印函数栈信息</td></tr><tr><td>next</td><td align="center">n</td><td>执行下一行</td></tr><tr><td>step</td><td align="center">s</td><td>一次执行一行，遇到函数会进入</td></tr><tr><td>finish</td><td align="center"></td><td>运行到函数结束</td></tr><tr><td>continue</td><td align="center">c</td><td>继续运行</td></tr><tr><td>break</td><td align="center">b</td><td>设置断点</td></tr><tr><td>info breakpoints</td><td align="center"></td><td>显示断点信息</td></tr><tr><td>delete</td><td align="center">d</td><td>删除断点</td></tr><tr><td>print</td><td align="center">p</td><td>打印表达式的值</td></tr><tr><td>run</td><td align="center">r</td><td>启动程序</td></tr><tr><td>until</td><td align="center">u</td><td>执行到指定行</td></tr><tr><td>info</td><td align="center">i</td><td>显示信息</td></tr><tr><td>help</td><td align="center">h</td><td>帮助信息</td></tr></tbody></table><p>在gdb命令行界面执行外部的shell命令：<br><code>!shell command</code></p><p>断点设置<br>b 行号 或者 b 函数名</p><p>关闭断点：disable 断点编号 （不带任何参数，默认关闭所有断点）<br>启用断点：enable 断点编号</p><p>##参考资料<br><a href="https://www.shiyanlou.com/courses/496" target="_blank" rel="noopener">https://www.shiyanlou.com/courses/496</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> gdb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Markdown</title>
+      <link href="/blog/2018/11/27/markdown/"/>
+      <url>/blog/2018/11/27/markdown/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p># 一级标题</p><p>## 二级标题</p><p>以此类推#的个数代表代表级数 支持6种级别的标题对应h1-h6</p><h3 id="加粗和倾斜"><a href="#加粗和倾斜" class="headerlink" title="加粗和倾斜"></a>加粗和倾斜</h3><p>前后两个*<em>或各两个__（下划线）包围的文本是加粗文本<br>前后一个</em>或各一个_（下划线）包围的文本是倾斜文本</p><h3 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h3><p>大于号加空格 &gt;</p><p>###代码块<br>对于程序员来说这个功能是必不可少的，插入程序代码的方式有两种，一种是利用缩进(Tab), 另一种是利用”`”符号（一般在ESC键下方）包裹代码。</p><p>语法说明：</p><p>插入行内代码，即插入一个单词或者一句代码的情况，使用<br>`code`<br>这样的形式插入。<br>插入多行代码，可以使用缩进或者``` code ```。</p><p>###插入表格</p><pre><code>| 一个普通标题 | 一个普通标题 | 一个普通标题 || ------ | ------ | ------ || 短文本 | 中等文本 | 稍微长一点的文本 || 稍微长一点的文本 | 短文本 | 中等文本 |</code></pre><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>&lt;网址&gt;</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/witnessai1/article/details/52551362" target="_blank" rel="noopener">https://blog.csdn.net/witnessai1/article/details/52551362</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
       
     </entry>
     
