@@ -3,11 +3,11 @@
   <title>blog</title>
   
   
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="https://linnz.github.io/blog/"/>
+  <link href="https://linnz.github.io/"/>
   <updated>2019-11-15T06:07:16.220Z</updated>
-  <id>https://linnz.github.io/blog/</id>
+  <id>https://linnz.github.io/</id>
   
   <author>
     <name>lnz</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>PostgreSQL源码安装</title>
-    <link href="https://linnz.github.io/blog/2019/05/12/postgresql-yuan-ma-an-zhuang/"/>
-    <id>https://linnz.github.io/blog/2019/05/12/postgresql-yuan-ma-an-zhuang/</id>
+    <link href="https://linnz.github.io/2019/05/12/postgresql/"/>
+    <id>https://linnz.github.io/2019/05/12/postgresql/</id>
     <published>2019-05-12T06:48:31.000Z</published>
     <updated>2019-11-15T06:07:16.220Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>两数相加</title>
-    <link href="https://linnz.github.io/blog/2019/01/28/two-add/"/>
-    <id>https://linnz.github.io/blog/2019/01/28/two-add/</id>
+    <link href="https://linnz.github.io/2019/01/28/two-add/"/>
+    <id>https://linnz.github.io/2019/01/28/two-add/</id>
     <published>2019-01-28T08:07:14.000Z</published>
     <updated>2019-11-15T06:07:16.220Z</updated>
     
@@ -60,14 +60,14 @@
     
     
     
-      <category term="leetcode" scheme="https://linnz.github.io/blog/tags/leetcode/"/>
+      <category term="leetcode" scheme="https://linnz.github.io/tags/leetcode/"/>
     
   </entry>
   
   <entry>
     <title>两数之和</title>
-    <link href="https://linnz.github.io/blog/2019/01/14/two-sum/"/>
-    <id>https://linnz.github.io/blog/2019/01/14/two-sum/</id>
+    <link href="https://linnz.github.io/2019/01/14/two-sum/"/>
+    <id>https://linnz.github.io/2019/01/14/two-sum/</id>
     <published>2019-01-14T14:10:25.000Z</published>
     <updated>2019-11-15T06:07:16.220Z</updated>
     
@@ -85,14 +85,14 @@
     
     
     
-      <category term="leetcode" scheme="https://linnz.github.io/blog/tags/leetcode/"/>
+      <category term="leetcode" scheme="https://linnz.github.io/tags/leetcode/"/>
     
   </entry>
   
   <entry>
     <title>GDB</title>
-    <link href="https://linnz.github.io/blog/2018/12/05/gdb/"/>
-    <id>https://linnz.github.io/blog/2018/12/05/gdb/</id>
+    <link href="https://linnz.github.io/2018/12/05/gdb/"/>
+    <id>https://linnz.github.io/2018/12/05/gdb/</id>
     <published>2018-12-05T15:44:16.000Z</published>
     <updated>2019-11-15T06:07:16.220Z</updated>
     
@@ -112,14 +112,14 @@
     
     
     
-      <category term="gdb" scheme="https://linnz.github.io/blog/tags/gdb/"/>
+      <category term="gdb" scheme="https://linnz.github.io/tags/gdb/"/>
     
   </entry>
   
   <entry>
     <title>Markdown</title>
-    <link href="https://linnz.github.io/blog/2018/11/27/markdown/"/>
-    <id>https://linnz.github.io/blog/2018/11/27/markdown/</id>
+    <link href="https://linnz.github.io/2018/11/27/markdown/"/>
+    <id>https://linnz.github.io/2018/11/27/markdown/</id>
     <published>2018-11-27T14:30:02.000Z</published>
     <updated>2019-11-15T06:07:16.220Z</updated>
     
@@ -137,7 +137,7 @@
     
     
     
-      <category term="markdown" scheme="https://linnz.github.io/blog/tags/markdown/"/>
+      <category term="markdown" scheme="https://linnz.github.io/tags/markdown/"/>
     
   </entry>
   
